@@ -5,6 +5,7 @@
     height: 100%;
     padding-left: 250px;
     padding-top: 66px;
+    position: fixed;
     width: 100%;
     &-header {
         @include display(flex);
@@ -42,7 +43,10 @@
     @include display(flex);
     @include justify-content(space-between);
     @include flex-wrap(wrap);
-    padding: 0 1em;
+    height: 100%;
+    padding: 0 1em 4em;
+    //overflow: hidden;
+    overflow-y: scroll;
 }
 
 .Track {
@@ -50,6 +54,7 @@
     padding: 5px;
     width: 310px;
     margin-bottom: 1em;
+
     &-image {
         height: 100px;
         margin: 0;

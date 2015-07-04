@@ -26,7 +26,7 @@ body { font-family: "Raleway", serif; }
 .Menu-item a:hover { background-color: #005d4f; }
 .Menu .is_active { background-color: #005d4f; font-weight: bold; }
 
-.Content { background: -webkit-linear-gradient(rgba(158, 158, 158, 0.5), rgba(158, 158, 158, 0.5)), url("../images/bg_oidoypaz.jpg") no-repeat top center; background: linear-gradient(rgba(158, 158, 158, 0.5), rgba(158, 158, 158, 0.5)), url("../images/bg_oidoypaz.jpg") no-repeat top center; background-size: cover; height: 100vh; height: 100%; padding-left: 250px; padding-top: 66px; width: 100%; }
+.Content { background: -webkit-linear-gradient(rgba(158, 158, 158, 0.5), rgba(158, 158, 158, 0.5)), url("../images/bg_oidoypaz.jpg") no-repeat top center; background: linear-gradient(rgba(158, 158, 158, 0.5), rgba(158, 158, 158, 0.5)), url("../images/bg_oidoypaz.jpg") no-repeat top center; background-size: cover; height: 100vh; height: 100%; padding-left: 250px; padding-top: 66px; position: fixed; width: 100%; }
 .Content-header { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -moz-box-pack: justify; box-pack: justify; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; -o-justify-content: space-between; justify-content: space-between; -ms-flex-pack: justify; padding: 0 1em; position: absolute; top: 0; }
 
 .User-link { background-color: rgba(255, 255, 255, 0.8); color: #111111; line-height: 50px; padding: 0.5em 1em; text-decoration: none; }
@@ -35,7 +35,7 @@ body { font-family: "Raleway", serif; }
 .Services { padding: 6px 0; width: 60%; }
 .Services p { color: #ffffff; margin: 0; text-shadow: 2px 2px 1px #111111; }
 
-.Tracks { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -moz-box-pack: justify; box-pack: justify; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; -o-justify-content: space-between; justify-content: space-between; -ms-flex-pack: justify; -webkit-box-lines: multiple; -moz-box-lines: multiple; box-lines: multiple; -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; padding: 0 1em; }
+.Tracks { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -moz-box-pack: justify; box-pack: justify; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; -o-justify-content: space-between; justify-content: space-between; -ms-flex-pack: justify; -webkit-box-lines: multiple; -moz-box-lines: multiple; box-lines: multiple; -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; padding: 0 1em 4em; overflow-y: scroll; }
 
 .Track { background-color: rgba(255, 255, 255, 0.5); padding: 5px; width: 310px; margin-bottom: 1em; }
 .Track-image { height: 100px; margin: 0; overflow: hidden; padding: 0; position: relative; width: 100%; }
