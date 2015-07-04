@@ -1,0 +1,77 @@
+.Content {
+    @include background(linear-gradient(rgba($gris, 0.5), rgba($gris, 0.5)), url("../images/bg_oidoypaz.jpg") no-repeat top center);
+    background-size: cover;
+    height: 100vh;
+    height: 100%;
+    padding-left: 250px;
+    padding-top: 66px;
+    width: 100%;
+    &-header {
+        @include display(flex);
+        @include justify-content(space-between);
+        padding: 0 1em;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.User {
+    &-link {
+        background-color: rgba($blanco, 0.8);
+        color: $negro;
+        line-height: 50px;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        .fa {
+            color: $azul;
+        }
+    }
+}
+
+.Services {
+    padding: 6px 0;
+    width: 60%;
+    p {
+        color: $blanco;
+        margin: 0;
+        text-shadow: 2px 2px 1px $negro;
+    }
+}
+
+.Tracks {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    padding: 0 1em;
+}
+
+.Track {
+    background-color: rgba($blanco, 0.5);
+    padding: 5px;
+    width: 310px;
+    margin-bottom: 1em;
+    &-image {
+        height: 100px;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 100%;
+        img {
+            @include transform(translateX(-50%) translateY(-50%));
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            width: inherit;
+        }
+    }
+    &-title {
+        margin: 0.25em;
+    }
+    &-description {
+
+    }
+    &-audio {
+
+    }
+}
