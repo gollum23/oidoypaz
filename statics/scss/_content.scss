@@ -1,82 +1,40 @@
-.Content {
-    @include background(linear-gradient(rgba($gris, 0.5), rgba($gris, 0.5)), url("../images/bg_oidoypaz.jpg") no-repeat top center);
-    background-size: cover;
-    height: 100vh;
-    height: 100%;
-    padding-left: 250px;
-    padding-top: 66px;
-    position: fixed;
-    width: 100%;
-    &-header {
-        @include display(flex);
-        @include justify-content(space-between);
-        padding: 0 1em;
-        position: absolute;
-        top: 0;
-    }
-}
-
-.User {
-    &-link {
-        background-color: rgba($blanco, 0.8);
-        color: $negro;
-        line-height: 50px;
-        padding: 0.5em 1em;
-        text-decoration: none;
-        .fa {
-            color: $azul;
-        }
-    }
-}
-
-.Services {
-    padding: 6px 0;
-    width: 60%;
-    p {
-        color: $blanco;
+.MiddleContent {
+    position: relative;
+    .Image {
         margin: 0;
-        text-shadow: 2px 2px 1px $negro;
-    }
-}
-
-.Tracks {
-    @include display(flex);
-    @include justify-content(space-between);
-    @include flex-wrap(wrap);
-    height: 100%;
-    padding: 0.5em 1em 4em;
-    overflow-y: scroll;
-}
-
-.Track {
-    background-color: rgba($amarillo, 0.2);
-    box-shadow: 0 0 8px rgba($negro, 1);
-    padding: 0.5em;
-    width: 320px;
-    margin-bottom: 1em;
-
-    &-image {
-        height: 100px;
-        margin: 0;
-        overflow: hidden;
         padding: 0;
-        position: relative;
-        width: 100%;
         img {
-            @include transform(translateX(-50%) translateY(-50%));
-            left: 50%;
-            position: absolute;
-            top: 50%;
-            width: inherit;
+            width: 100%;
         }
     }
-    &-title {
-        margin: 0.25em;
-    }
-    &-description {
-
-    }
-    &-audio {
-
+    .Logo {
+        background-color: white;
+        border: 11px solid $verdeclaro;
+        border-radius: 50%;
+        bottom: -53px;
+        left: 50%;
+        height: 210px;
+        position: absolute;
+        width: 210px;
+        @include transform(translateX(-50%));
+        h1 {
+            border-bottom: 2px solid $azul;
+            color: $azul;
+            display: inline-block;
+            font-size: 60px;
+            font-family: 'Amatic SC', cursive;
+            font-weight: normal;
+            line-height: 64px;
+            margin: 45px 14px 0;
+            text-align: center;
+        }
+        h2 {
+            color: $azul;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0.25em auto;
+        }
     }
 }

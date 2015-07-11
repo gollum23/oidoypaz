@@ -49,5 +49,6 @@ crashlytics-build.properties
 
 # NPM
 node_modules/
+v1/
 
 

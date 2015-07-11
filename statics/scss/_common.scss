@@ -1,14 +1,15 @@
-html,
-body {
-    height: 100%;
-}
-
-body {
-    font-family: "Raleway", serif;
-}
-
 *,
 *::after,
 *::before {
     box-sizing: border-box;
+}
+
+body {
+    font-family: "bebas_neueregular", serif;
+    font-size: 18px;
+}
+
+.Wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
 }

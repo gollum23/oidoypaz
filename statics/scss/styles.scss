@@ -2,18 +2,14 @@
 @import "neat/neat";
 @import "../css/normalize.css";
 @import "../css/font-awesome.min.css";
+@import "../css/font_bebas.css";
 
-$azul: #2196f3;
-$verde: #009688;
-$verdeOscuro: #005d4f;
-$cafe: #795548;
-$blanco: #ffffff;
-$negro: #111111;
-$gris: #9e9e9e;
-$amarillo: #cca814;
-$magenta: #ff19e8;
+$verde: #1e7531;
+$verdeclaro: #94c120;
+$azul: #00a0e4;
 
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+//@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
 
 @import "utilities";
 @import "common";
