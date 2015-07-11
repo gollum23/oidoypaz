@@ -45,8 +45,8 @@ body { font-family: "bebas_neueregular", serif; font-size: 18px; }
 .Track-image { height: 150px; width: 150px; }
 .Track-image img { border-radius: 50%; width: 100%; height: 100%; }
 .Track-content { padding: 0 0.5em; width: 582px; }
-.Track-title { margin: 0 0 0.25em; }
-.Track-description { margin: 0.25em 0 0.5em; }
+.Track-title { color: #00a0e4; margin: 0 0 0.25em; }
+.Track-description { font-weight: normal; margin: 0.25em 0 0.5em; }
 .Track-player { width: 250px; }
 .Track-player audio { width: 100%; }
 
