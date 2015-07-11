@@ -34,11 +34,12 @@ body { font-family: "bebas_neueregular", serif; font-size: 18px; }
 .MiddleContent .Logo h1 { border-bottom: 2px solid #00a0e4; color: #00a0e4; display: inline-block; font-size: 60px; font-family: 'Amatic SC', cursive; font-weight: normal; line-height: 64px; margin: 45px 14px 0; text-align: center; }
 .MiddleContent .Logo h2 { color: #00a0e4; font-size: 18px; font-weight: normal; text-align: center; text-transform: uppercase; margin: 0.25em auto; }
 
-.MainContent { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; }
+.MainContent { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; min-height: 400px; }
 .MainContent-left { background-color: #00a0e4; padding: 1em; width: 20%; }
 .MainContent-center { padding: 4em 1em 0; width: 60%; }
 .MainContent-right { width: 20%; }
-.MainContent-title { color: white; font-weight: normal; margin: 0; min-height: 400px; }
+.MainContent-title { color: white; font-weight: normal; margin: 0; }
+.MainContent-categories { color: white; }
 
 .Track { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; }
 .Track:not(:first-child) { margin-top: 1em; }
@@ -49,5 +50,9 @@ body { font-family: "bebas_neueregular", serif; font-size: 18px; }
 .Track-description { font-weight: normal; margin: 0.25em 0 0.5em; }
 .Track-player { width: 250px; }
 .Track-player audio { width: 100%; }
+
+.Footer { background-color: #1e7531; display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -moz-box-pack: justify; box-pack: justify; -webkit-justify-content: space-between; -moz-justify-content: space-between; -ms-justify-content: space-between; -o-justify-content: space-between; justify-content: space-between; -ms-flex-pack: justify; height: 50px; padding: 16px 35px; }
+.Footer span { color: white; }
+.Footer i { color: white; }
 
 /*# sourceMappingURL=styles.css.map */

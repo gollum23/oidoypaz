@@ -1,0 +1,13 @@
+.Footer {
+    background-color: $verde;
+    @include display(flex);
+    @include justify-content(space-between);
+    height: 50px;
+    padding: 16px 35px;
+    span {
+        color: white;
+    }
+    i {
+        color: white;
+    }
+}
