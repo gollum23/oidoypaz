@@ -1,0 +1,108 @@
+.MiddleContent {
+    position: relative;
+    .Image {
+        margin: 0;
+        padding: 0;
+        height: 400px;
+        img {
+            width: 100%;
+        }
+    }
+    .Logo {
+        background-color: white;
+        border: 11px solid $verdeclaro;
+        border-radius: 50%;
+        bottom: -53px;
+        left: 50%;
+        height: 210px;
+        position: absolute;
+        width: 210px;
+        @include transform(translateX(-50%));
+        h1 {
+            border-bottom: 2px solid $azul;
+            color: $azul;
+            display: inline-block;
+            font-size: 60px;
+            font-family: 'Amatic SC', cursive;
+            font-weight: normal;
+            line-height: 64px;
+            margin: 45px 14px 0;
+            text-align: center;
+        }
+        h2 {
+            color: $azul;
+            font-size: 18px;
+            font-weight: normal;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0.25em auto;
+        }
+    }
+}
+.MainContent {
+    @include display(flex);
+    min-height: 400px;
+    &-left {
+        background-color: $azul;
+        padding: 1em;
+        width: 20%;
+    }
+    &-center {
+        padding: 4em 1em 1em;
+        width: 60%;
+    }
+    &-right {
+        //border-left: 2px solid $azul;
+        width: 20%;
+    }
+    &-title {
+        color: white;
+        font-weight: normal;
+        margin: 0;
+    }
+    &-categories {
+        color: white;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+
+.Track {
+    @include display(flex);
+    &:not(:first-child) {
+        margin-top: 1em;
+    }
+    &-image {
+        height: 150px;
+        width: 150px;
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+    &-content {
+        padding: 0 0.5em;
+        width: 582px;
+
+    }
+    &-title {
+        color: $azul;
+        font-weight: normal;
+        margin: 0 0 0.25em;
+    }
+    &-description {
+        font-weight: normal;
+        margin:  0.25em 0 0.5em;
+    }
+    &-player {
+        width: 100%;
+        audio {
+            width: 100%;
+        }
+    }
+}
+

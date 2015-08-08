@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", serif;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "bebas_neueregular", serif;
+}
+
+p {
+    font-size: 14px;
+}
+
+.Wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}

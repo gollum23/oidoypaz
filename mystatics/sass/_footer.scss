@@ -1,0 +1,23 @@
+.Footer {
+    background-color: $verde;
+    @include display(flex);
+    @include justify-content(space-between);
+    line-height: 24px;
+    padding: 16px 35px;
+    span {
+        color: white;
+    }
+    i {
+        color: white;
+    }
+    &-copyleft {
+        font-size: 12px;
+        a, span {
+            display: inline-block;
+            vertical-align: middle;
+            height: 24px;
+            color: white;
+        }
+    }
+
+}

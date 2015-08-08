@@ -1,0 +1,20 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+@import "../css/normalize.css";
+@import "../css/flexslider.css";
+@import "../css/font-awesome.min.css";
+@import "../css/font_bebas.css";
+
+$verde: #1e7531;
+$verdeclaro: #94c120;
+$azul: #00a0e4;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Amatic+SC);
+
+@import "utilities";
+@import "common";
+@import "header";
+@import "content";
+@import "footer";
+@import "audiojs";

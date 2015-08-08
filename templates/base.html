@@ -1,0 +1,91 @@
+{% load static from staticfiles %}
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Oído y Paz</title>
+    {#  SEO  #}
+
+    {#  END SEO  #}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <section class="Wrapper">
+        <header class="Header">
+            <div class="Header-logo">
+                <a href="{% url 'web:home' %}"><span class="u-textBebas">Oído y paz</span></a>
+            </div>
+            <nav class="Navigation">
+                <ul>
+                    <li class="u-textBebas"><a href="{% url 'web:what' %}">¿Qué somos?</a></li>
+                    <li class="u-textBebas"><a href="">Tracks favoritos</a></li>
+                    <li class="u-textBebas"><a href="">Sube tu track</a></li>
+                </ul>
+            </nav>
+            <div class="Search">
+                <label class="u-textBebas" for="">Busca tu audio</label>
+                <input type="text">
+                <button><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+        <section class="MiddleContent">
+            <div class="flexslider">
+                <ul class="slides">
+                    {% for slide in slider %}
+                        <img src="/media/{{ slide.img }}" alt="">
+                    {% empty %}
+                        No hay imagenes
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="Logo">
+                <h1>Oído y Paz</h1>
+                <h2>El oír claro de la historia</h2>
+            </div>
+        </section>
+        <section class="MainContent">
+            <div class="MainContent-left">
+                <h3 class="MainContent-title">Categorias</h3>
+                <ul class="MainContent-categories">
+                    <li><a href="">Ley de Víctimas 1448</a></li>
+                    <li><a href="">Despojo y Abandono</a></li>
+                    <li><a href="">Desplazados</a></li>
+                    <li><a href="">Restitución</a></li>
+                    <li><a href="">Incumplimiento</a></li>
+                    <li><a href="">Buenas práctivas</a></li>
+                </ul>
+            </div>
+            <div class="MainContent-center">
+                {% block mainContent %}
+
+                {% endblock %}
+            </div>
+            <div class="MainContent-right">
+                <h2 class="Podcast-title">Podcast</h2>
+                <audio id="podcast"></audio>
+                <ol class="PodcastList">
+
+                </ol>
+            </div>
+        </section>
+        <footer class="Footer">
+            <div class="Footer-social">
+                <span>Nuestras redes sociales</span>
+                <a href=""><i class="fa fa-facebook-square"></i></a>
+                <a href=""><i class="fa fa-twitter-square"></i></a>
+                <a href=""><i class="fa fa-google-plus-square"></i></a>
+            </div>
+            <div class="Footer-copyleft">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                <span>Esta obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Licencia Creative Commons Atribución 4.0 Internacional</a>.</span>
+            </div>
+            <div class="Footer-credits">
+                <span>Desarrollado por Diego Forero</span>
+            </div>
+        </footer>
+    </section>
+    <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/vendor/audiojs/audio.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
