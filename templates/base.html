@@ -18,8 +18,8 @@
             <nav class="Navigation">
                 <ul>
                     <li class="u-textBebas"><a href="{% url 'web:what' %}">¿Qué somos?</a></li>
-                    <li class="u-textBebas"><a href="">Tracks favoritos</a></li>
-                    <li class="u-textBebas"><a href="">Sube tu track</a></li>
+                    <li class="u-textBebas"><a href="{% url 'web:favorite' %}">Tracks favoritos</a></li>
+                    <li class="u-textBebas"><a href="{% url 'web:upload' %}">Sube tu track</a></li>
                 </ul>
             </nav>
             <div class="Search">
@@ -47,12 +47,9 @@
             <div class="MainContent-left">
                 <h3 class="MainContent-title">Categorias</h3>
                 <ul class="MainContent-categories">
-                    <li><a href="">Ley de Víctimas 1448</a></li>
-                    <li><a href="">Despojo y Abandono</a></li>
-                    <li><a href="">Desplazados</a></li>
-                    <li><a href="">Restitución</a></li>
-                    <li><a href="">Incumplimiento</a></li>
-                    <li><a href="">Buenas práctivas</a></li>
+                    {% for c in category_menu %}
+                        <li><a href="{% url 'web:category' c.slug %}">{{ c.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </div>
             <div class="MainContent-center">

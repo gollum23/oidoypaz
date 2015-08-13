@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block mainContent %}
+    <h2>{{ object.name }}</h2>
+    {% autoescape off %}
+        {{ object.content }}
+    {% endautoescape %}
+{% endblock %}

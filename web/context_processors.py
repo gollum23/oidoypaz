@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import get_list_or_404
-from .models import Slider
+from .models import Slider, Category
 
 
 def slider(request):
     slides = Slider.objects.all()
 
     return {'slider': slides}
+
+
+def category(request):
+    categories = Category.objects.all()
+
+    return {'category_menu': categories}

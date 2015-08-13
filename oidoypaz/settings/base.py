@@ -12,6 +12,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
     'web',
 )
 
@@ -44,6 +45,7 @@ TEMPLATES = [
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 'web.context_processors.slider',
+                'web.context_processors.category',
             ],
         },
     },
@@ -65,10 +67,13 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (
+
     os.path.join(BASE_DIR, "mystatics"),
 )
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+CKEDITOR_UPLOAD_PATH = "media/ck/"
 
 LOGGING = {
     'version': 1,
