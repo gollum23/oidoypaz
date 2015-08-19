@@ -17,6 +17,7 @@
         height: 210px;
         position: absolute;
         width: 210px;
+        z-index: 99;
         @include transform(translateX(-50%));
         h1 {
             border-bottom: 2px solid $azul;

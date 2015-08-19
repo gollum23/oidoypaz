@@ -32,7 +32,7 @@
             <div class="flexslider">
                 <ul class="slides">
                     {% for slide in slider %}
-                        <img src="/media/{{ slide.img }}" alt="">
+                        <li><img src="/media/{{ slide.img }}" alt=""></li>
                     {% empty %}
                         No hay imagenes
                     {% endfor %}
@@ -83,6 +83,7 @@
     </section>
     <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
     <script src="{% static 'js/vendor/audiojs/audio.min.js' %}"></script>
+    <script src="{% static 'js/vendor/jquery.flexslider-min.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

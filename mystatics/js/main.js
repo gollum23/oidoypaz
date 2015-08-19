@@ -2,6 +2,10 @@
  * Created by gollum23 on 7/4/15.
  */
 (function () {
+    $('.flexslider' ).flexslider({
+        animation: 'fade',
+        controlNav: false
+    });
     audiojs.events.ready(function () {
         var as = document.getElementsByClassName('Track-data');
         audiojs.createAll({}, as);
