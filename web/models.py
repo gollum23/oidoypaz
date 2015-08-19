@@ -103,3 +103,10 @@ class SoundLibrary(models.Model):
         verbose_name='Audio',
         upload_to=fonoteca_folder
     )
+    year = models.CharField(
+        verbose_name='Año',
+        max_length=4
+    )
+
+    def __str__(self):
+        return '{}'.format(self.track.name)
