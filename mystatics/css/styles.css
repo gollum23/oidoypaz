@@ -76,6 +76,6 @@ p { font-size: 14px; }
 .PodcastList { list-style: none; padding-left: 24px; }
 .PodcastList-item { position: relative; }
 .PodcastList-item a { color: black; display: block; font-weight: normal; text-decoration: none; padding: 0.25em 0; }
-.PodcastList-item.playing::before { content: '\f001'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -20px; top: 5px; color: #1e7531; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
+.PodcastList-item.playing::before { font-family: "FontAwesome"; content: '\f001'; width: 14px; height: 14px; padding: 3px; line-height: 14px; margin: 0px; position: absolute; left: -20px; top: 5px; color: #1e7531; font-size: 13px; text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2); }
 
 /*# sourceMappingURL=styles.css.map */
