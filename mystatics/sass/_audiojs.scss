@@ -27,8 +27,12 @@
     color: $azul;
     text-align: center;
 }
+.Voces-title {
+    color: white;
+    text-align: center;
+}
 
-.PodcastList {
+.PodcastList, .VocesList {
     list-style: none;
     padding-left: 24px;
     &-item {

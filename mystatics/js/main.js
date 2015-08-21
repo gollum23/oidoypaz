@@ -11,28 +11,50 @@
         audiojs.createAll({}, as);
 
         var podcast = document.getElementById('podcast');
+        var voces = document.getElementById('voces');
 
         var a = audiojs.create(podcast,{
             trackEnded: function() {
-                var next = $('ol li.playing').next();
-                if (!next.length) next = $('ol li').first();
+                var next = $('ol.PodcastList li.playing').next();
+                if (!next.length) next = $('ol.PodcastList li').first();
                 next.addClass('playing').siblings().removeClass('playing');
                 audio.load($('a', next).attr('data-src'));
                 audio.play();
             }
-        })
+        });
+
+        var v = audiojs.create(voces, {
+            trackEnded: function () {
+                var next = $ ( 'ol.VocesList li.playing' ).next ();
+                if ( !next.length ) next = $ ( 'ol.VocesList li' ).first ();
+                next.addClass ( 'playing' ).siblings ().removeClass ( 'playing' );
+                voces.load ( $ ( 'a', next ).attr ( 'data-src' ) );
+                voces.play ();
+            }
+        });
         // Load in the first track
         var audio = a;
-        first = $('ol a').attr('data-src');
-        $('ol li').first().addClass('playing');
+        first = $('ol.PodcastList a').attr('data-src');
+        $('ol.PodcastList li').first().addClass('playing');
         audio.load(first);
 
+        var voces = v;
+        first = $('ol.VocesList a').attr('data-src');
+        $('ol.VocesList li').first().addClass('playing');
+        voces.load(first);
+
         // Load in a track on click
-        $('ol li').click(function(e) {
+        $('ol.PodcastList li').click(function(e) {
             e.preventDefault();
             $(this).addClass('playing').siblings().removeClass('playing');
             audio.load($('a', this).attr('data-src'));
             audio.play();
+        });
+        $('ol.VocesList li').click(function(e) {
+            e.preventDefault();
+            $(this).addClass('playing').siblings().removeClass('playing');
+            voces.load($('a', this).attr('data-src'));
+            voces.play();
         });
             // Keyboard shortcuts
         $(document).keydown(function(e) {
