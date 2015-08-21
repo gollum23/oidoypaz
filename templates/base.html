@@ -61,7 +61,9 @@
                 <h2 class="Podcast-title">Podcast</h2>
                 <audio id="podcast"></audio>
                 <ol class="PodcastList">
-
+                    {% for p in fonoteca %}
+                        <li class="PodcastList-item"><a href="#" data-src="{{ p.track }}">{{ p.title}}</a></li>
+                    {% endfor %}
                 </ol>
             </div>
         </section>
