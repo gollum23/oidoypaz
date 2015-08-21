@@ -107,6 +107,10 @@ class SoundLibrary(models.Model):
         verbose_name='Año',
         max_length=4
     )
+    titulo = models.CharField(
+        verbose_name='Título',
+        max_length=100
+    )
 
     def __str__(self):
-        return '{}'.format(self.track.name)
+        return '{}'.format(self.titulo)
