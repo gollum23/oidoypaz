@@ -8,6 +8,7 @@
         @include align-items(center);
         background-color: white;
         border-radius: 50%;
+        border: 5px solid $azul;
         @include display(flex);
         padding: 10px;
         height: 80px;
