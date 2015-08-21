@@ -46,6 +46,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'web.context_processors.slider',
                 'web.context_processors.category',
+                'web.context_processors.fonoteca',
             ],
         },
     },
