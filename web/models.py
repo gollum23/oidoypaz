@@ -18,7 +18,9 @@ def audio_folder(instance, filename):
 
 
 def fonoteca_folder(instance, filename):
-    return '{}/{}'.format('fonoteca', slughifi(filename))
+    ext = filename.split(".")[-1]
+    name = '{}.{}'.format(slughifi(instance.titulo), ext)
+    return '{}/{}'.format('fonoteca', name)
 
 
 @python_2_unicode_compatible
