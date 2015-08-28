@@ -6,6 +6,19 @@
         animation: 'fade',
         controlNav: false
     });
+    $('.read_more' ).on('click', function(e) {
+        e.preventDefault();
+        if ($('.u-is_hidden' ).hasClass('is_visible')){
+            $(this ).html('Leer más...');
+            $('.u-is_hidden' ).slideUp().removeClass('is_visible')
+        }
+        else {
+            $(this ).html('Leer menos...');
+            $('.u-is_hidden' ).slideDown().addClass('is_visible')
+        }
+
+    });
+
     audiojs.events.ready(function () {
         var as = document.getElementsByClassName('Track-data');
         audiojs.createAll({}, as);
