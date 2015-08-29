@@ -53,7 +53,8 @@
         width: 60%;
     }
     &-right {
-        border-left: 1px solid $azul;
+        border-left: 1px solid #999999;
+        box-shadow: -4px 0 4px #999999;
         padding: 0.5em;
         width: 20%;
     }
