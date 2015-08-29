@@ -73,6 +73,8 @@
 
 .Track {
     @include display(flex);
+    margin: 0 auto;
+    width: 50%;
     &:not(:first-child) {
         margin-top: 1em;
     }
@@ -104,6 +106,9 @@
         width: 100%;
         audio {
             width: 100%;
+        }
+        .scrubber {
+            width: 53% !important;
         }
     }
 }
