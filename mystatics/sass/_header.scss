@@ -8,14 +8,15 @@
         @include align-items(center);
         background-color: white;
         border-radius: 50%;
-        border: 5px solid $azul;
+        border: 5px solid $verdeclaro;
         @include display(flex);
         padding: 10px;
         height: 80px;
         width: 80px;
         a {
-            color: #222222;
+            color: $azul;
             font-size: 1.2em;
+            font-weight: bold;
             line-height: 1em;
             text-align: center;
             text-decoration: none;
