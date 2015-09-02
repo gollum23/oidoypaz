@@ -76,7 +76,9 @@
                 <audio id="podcast"></audio>
                 <ol class="PodcastList">
                     {% for p in library %}
-                        <li class="PodcastList-item"><a href="#" data-src="/media/{{ p.track }}">{{ p.titulo}}</a></li>
+                        <li class="PodcastList-item">
+                            <a href="#" data-src="/media/{{ p.track }}" data-album="{{ p.album }}" data-artist="{{ p.artist }}" data-year="{{ p.year }}">{{ p.titulo}}</a>
+                        </li>
                     {% endfor %}
                 </ol>
             </div>
@@ -110,6 +112,7 @@
     <script src="{% static 'js/vendor/jquery-2.1.4.min.js' %}"></script>
     <script src="{% static 'js/vendor/audiojs/audio.min.js' %}"></script>
     <script src="{% static 'js/vendor/jquery.flexslider-min.js' %}"></script>
+    <script src="http://cdn.jsdelivr.net/qtip2/2.2.1/jquery.qtip.min.js"></script>
     <script src="{% static 'js/main.js' %}"></script>
     {% block extraJS %}{% endblock %}
 </body>

@@ -19,6 +19,19 @@
 
     });
 
+    $('.PodcastList-item' ).find('a' ).each(function() {
+        $(this).qtip({
+            content: {
+                title: 'Artista: ' + $(this ).data('artist'),
+                text: 'Album: ' + $(this ).data('year') + ' - ' + $(this ).data('year')
+            },
+            position: {
+                my: 'top center',
+                at: 'bottom center'
+            }
+        });
+    });
+
     audiojs.events.ready(function () {
         var as = document.getElementsByClassName('Track-data');
         audiojs.createAll({}, as);
