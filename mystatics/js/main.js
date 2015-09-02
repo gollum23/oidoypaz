@@ -23,7 +23,7 @@
         $(this).qtip({
             content: {
                 title: 'Artista: ' + $(this ).data('artist'),
-                text: 'Album: ' + $(this ).data('year') + ' - ' + $(this ).data('year')
+                text: 'Album: ' + $(this ).data('album') + ' - ' + $(this ).data('year')
             },
             position: {
                 my: 'top center',
