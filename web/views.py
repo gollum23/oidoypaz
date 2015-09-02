@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+from django.http import JsonResponse
 from django.views.generic import TemplateView, DetailView
 
-from web.models import Category
+from web.models import Category, Podcast
 
 
 class HomeView(TemplateView):
@@ -23,3 +24,19 @@ class UploadTracksView(TemplateView):
 class CategoryView(DetailView):
     template_name = 'detail_category.html'
     model = Category
+
+
+def get_like_ajax_view(request, pod):
+    if request.is_ajax():
+        podcast = Podcast.objects.get(pk=pod)
+        data = {'likes': podcast.like}
+        return JsonResponse(data, safe=False)
+
+
+def like_ajax_view(request, pod):
+    if request.is_ajax():
+        podcast = Podcast.objects.get(pk=pod)
+        podcast.like += 1
+        podcast.save()
+        data = {'likes': podcast.like}
+        return JsonResponse(data, safe=False)

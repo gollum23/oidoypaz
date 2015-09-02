@@ -75,7 +75,7 @@
 .Track {
     @include display(flex);
     margin: 0 auto;
-    width: 50%;
+    width: 80%;
     &:not(:first-child) {
         margin-top: 1em;
     }
@@ -104,13 +104,33 @@
         margin:  0.25em 0 0.5em;
     }
     &-player {
-        width: 100%;
+        width: 303px;
         audio {
             width: 100%;
         }
         .scrubber {
             width: 53% !important;
         }
+    }
+}
+
+.Like {
+    color: $azul;
+    margin-left: 1em;
+    position: relative;
+    i {
+        cursor: pointer;
+    }
+    .likes_val {
+        padding: 0 0.5em;
+        border-radius: 0.5em;
+        background: $verde;
+        display: inline-block;
+        color: #ffffff;
+        margin-right: 0.25em;
+        position: absolute;
+        top: 0;
+        right: -2em;
     }
 }
 

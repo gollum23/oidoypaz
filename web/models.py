@@ -82,6 +82,10 @@ class Podcast(models.Model):
         verbose_name='Audio',
         upload_to=audio_folder
     )
+    like = models.SmallIntegerField(
+        verbose_name='Me gusta',
+        default=0
+    )
 
     def __str__(self):
         return '{}'.format(self.title)
