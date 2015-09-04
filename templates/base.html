@@ -45,7 +45,7 @@
         </section>
         <section class="MainContent">
             <div class="MainContent-left">
-                <h3 class="MainContent-title">Categorias</h3>
+                <h3 class="MainContent-title">Categorías</h3>
                 <ul class="MainContent-categories">
                     {% for c in category_menu %}
                         <li><a href="{% url 'web:category' c.slug %}">{{ c.name }}</a></li>
@@ -81,6 +81,13 @@
                         </li>
                     {% endfor %}
                 </ol>
+                <div class="Gratitude">
+                    <p>Con el apoyo</p>
+                    <figure class="Gratitude-image">
+                        <img src="{% static 'images/Logo_Pan_Para_El_Mundo.jpg' %}" alt="Pan para el mundo">
+                    </figure>
+                    <p class="">Pan para el mundo</p>
+                </div>
             </div>
         </section>
         <footer class="Footer">
