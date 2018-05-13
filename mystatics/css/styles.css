@@ -46,7 +46,7 @@ p { font-size: 14px; }
 .MiddleContent .Image { margin: 0; padding: 0; height: 400px; }
 .MiddleContent .Image img { width: 100%; }
 .MiddleContent .Logo { background-color: white; border: 11px solid #94c120; border-radius: 50%; bottom: -53px; left: 50%; height: 210px; position: absolute; width: 210px; z-index: 99; -webkit-transform: translateX(-50%); -moz-transform: translateX(-50%); -ms-transform: translateX(-50%); -o-transform: translateX(-50%); transform: translateX(-50%); }
-.MiddleContent .Logo h1 { border-bottom: 2px solid #00a0e4; color: #00a0e4; display: inline-block; font-size: 60px; font-family: 'Amatic SC', cursive; font-weight: normal; line-height: 64px; margin: 45px 14px 0; text-align: center; }
+.MiddleContent .Logo h1 { border-bottom: 2px solid #00a0e4; color: #00a0e4; display: inline-block; font-size: 58px; font-family: 'Amatic SC', cursive; font-weight: normal; line-height: 64px; margin: 45px 14px 0; text-align: center; }
 .MiddleContent .Logo h2 { color: #00a0e4; font-size: 18px; font-weight: normal; text-align: center; text-transform: uppercase; margin: 0.25em auto; }
 
 .MainContent { display: -webkit-box; display: -moz-box; display: box; display: -webkit-flex; display: -moz-flex; display: -ms-flexbox; display: flex; min-height: 400px; }
