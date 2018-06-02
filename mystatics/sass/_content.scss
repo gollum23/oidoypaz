@@ -82,6 +82,13 @@
     }
 }
 
+.News {
+    width: 100%;
+    img {
+        width: 100%;
+    }
+}
+
 .Track {
     @include display(flex);
     margin: 0 auto;
