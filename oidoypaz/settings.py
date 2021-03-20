@@ -63,6 +63,16 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'oidoypaz.wsgi.application'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.environ['DB_OIDOYPAZ'],
+        'USER': os.environ['DB_USER'],
+        'PASSWORD': os.environ['DB_PASS'],
+        'HOST': os.environ.get('DB_HOST', 'oidoypaz-postgresql'),
+    }
+}
+
 LANGUAGE_CODE = 'es-co'
 
 TIME_ZONE = 'UTC'
