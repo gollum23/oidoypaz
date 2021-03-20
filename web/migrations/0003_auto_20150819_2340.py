@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models, migrations
+import django.db.models.deletion
 import web.models
 import ckeditor.fields
 
@@ -53,6 +54,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='podcast',
             name='category',
-            field=models.ForeignKey(verbose_name='Categor\xeda', to='web.Category'),
+            field=models.ForeignKey(verbose_name='Categor\xeda', to='web.Category', on_delete=django.db.models.deletion.CASCADE),
         ),
     ]

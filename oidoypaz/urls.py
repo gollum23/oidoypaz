@@ -23,8 +23,7 @@ from web import urls as web_urls
 
 urlpatterns = [
     url(r'^', include(web_urls, namespace='web')),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^ckeditor/', include('ckeditor.urls')),
+    url(r'^admin/', admin.site.urls),
 ]
 
 if settings.DEBUG:

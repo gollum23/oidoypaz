@@ -1,0 +1,37 @@
+version: '3'
+services:
+  odioypaz:
+    image: mantis/odioypaz
+    volumes:
+      - ../../:/app/
+    ports:
+      - "8002:8000"
+    container_name: odioypaz
+    restart: on-failure
+    environment:
+      - TERM=xterm
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DB_OIDOYPAZ=${DB_OIDOYPAZ}
+      - DATABASE_USER=${DB_USER}
+      - DATABASE_PASS=${DB_PASS}
+      - DB_HOST=${DB_HOST}
+    depends_on:
+      - odioypaz-postgresql
+    networks:
+      - odioypaznet
+  odioypaz-postgresql:
+    image: postgres:11.6
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_OIDOYPAZ}
+    container_name: odioypaz-postgresql
+    networks:
+      odioypaznet:
+        aliases:
+          - odioypaz-postgresql
+    volumes:
+      - ../../.data/odioypaz-postgres:/var/lib/postgresql/data
+networks:
+   odioypaznet:
+     external: true

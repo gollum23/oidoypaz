@@ -1,0 +1,31 @@
+version: '3'
+services:
+  oidoypaz:
+    image: mantis/oidoypaz-2020
+    volumes:
+      - ../../:/app/
+    ports:
+      - "8002:8000"
+    container_name: oidoypaz
+    environment:
+      - TERM=xterm
+    depends_on:
+      - oidoypaz-postgresql
+    networks:
+      - mantis
+  oidoypaz-postgresql:
+    image: postgres:11.6
+    environment:
+      - POSTGRES_USER=oidoypaz
+      - POSTGRES_PASSWORD=oidoypaz
+      - POSTGRES_DB=oidoypaz
+    container_name: oidoypaz-postgresql
+    networks:
+      mantis:
+        aliases:
+          - oidoypaz-postgresql
+    volumes:
+      - ../../.data/oidoypaz-postgres:/var/lib/postgresql/data
+networks:
+   mantis:
+     external: true

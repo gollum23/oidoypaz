@@ -13,6 +13,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ['DB_OIDOYPAZ'],
         'USER': os.environ['DB_USER'],
-        'PASSWORD': os.environ['DB_PASS']
+        'PASSWORD': os.environ['DB_PASS'],
+        'HOST': os.environ.get('DB_HOST', 'oidoypaz-postgresql'),
     }
 }

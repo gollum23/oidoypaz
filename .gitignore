@@ -1,4 +1,7 @@
 *.py[co]
 .idea/
+.data/
 media/
 static/
+.env
+*.sql

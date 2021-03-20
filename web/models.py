@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-from django.utils.encoding import python_2_unicode_compatible
 
 from ckeditor.fields import RichTextField
 from helpers.slughifi import slughifi
@@ -23,7 +22,6 @@ def fonoteca_folder(instance, filename):
     return '{}/{}'.format('fonoteca', name)
 
 
-@python_2_unicode_compatible
 class Slider(models.Model):
     img = models.ImageField(
         verbose_name='Imagen',
@@ -37,7 +35,6 @@ class Slider(models.Model):
         return '{}'.format(self.img.name)
 
 
-@python_2_unicode_compatible
 class Category(models.Model):
     name = models.CharField(
         max_length=100,
@@ -65,11 +62,11 @@ class Category(models.Model):
         ordering = ['id']
 
 
-@python_2_unicode_compatible
 class Podcast(models.Model):
     category = models.ForeignKey(
         Category,
-        verbose_name='Categoría'
+        verbose_name='Categoría',
+        on_delete=models.CASCADE,
     )
     title = models.CharField(
         verbose_name='Título',
@@ -95,7 +92,6 @@ class Podcast(models.Model):
         verbose_name_plural = 'Podcasts'
 
 
-@python_2_unicode_compatible
 class SoundLibrary(models.Model):
     artist = models.CharField(
         verbose_name='Artista',

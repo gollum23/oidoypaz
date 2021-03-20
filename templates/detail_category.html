@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load static from staticfiles %}
+{% load static %}
 {% block mainContent %}
     <h2>{{ object.name }}</h2>
     {% if object.podcast_set.all %}
