@@ -3,7 +3,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-SECRET_KEY = os.environ['SECRET_KEY_OIDOYPAZ']
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 INSTALLED_APPS = (
     'django.contrib.admin',
