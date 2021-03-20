@@ -12,8 +12,8 @@ services:
       - TERM=xterm
       - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
       - DB_OIDOYPAZ=${DB_OIDOYPAZ}
-      - DATABASE_USER=${DB_USER}
-      - DATABASE_PASS=${DB_PASS}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
       - DB_HOST=${DB_HOST}
     depends_on:
       - oidoypaz-postgresql
