@@ -1,12 +1,12 @@
 version: '3'
 services:
-  odioypaz:
-    image: mantis/odioypaz
+  oidoypaz:
+    image: mantis/oidoypaz
     volumes:
       - ../../:/app/
     ports:
       - "8002:8000"
-    container_name: odioypaz
+    container_name: oidoypaz
     restart: on-failure
     environment:
       - TERM=xterm
@@ -16,22 +16,22 @@ services:
       - DATABASE_PASS=${DB_PASS}
       - DB_HOST=${DB_HOST}
     depends_on:
-      - odioypaz-postgresql
+      - oidoypaz-postgresql
     networks:
-      - odioypaznet
-  odioypaz-postgresql:
+      - oidoypaznet
+  oidoypaz-postgresql:
     image: postgres:11.6
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASS}
       - POSTGRES_DB=${DB_OIDOYPAZ}
-    container_name: odioypaz-postgresql
+    container_name: oidoypaz-postgresql
     networks:
-      odioypaznet:
+      oidoypaznet:
         aliases:
-          - odioypaz-postgresql
+          - oidoypaz-postgresql
     volumes:
-      - ../../.data/odioypaz-postgres:/var/lib/postgresql/data
+      - ../../.data/oidoypaz-postgres:/var/lib/postgresql/data
 networks:
-   odioypaznet:
+   oidoypaznet:
      external: true
