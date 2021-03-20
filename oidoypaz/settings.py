@@ -1,9 +1,12 @@
-# -*- coding: utf-8 -*-
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+DEBUG = os.environ.get('DEBUG', False)
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+PROD_ENV = os.environ.get('PRODUCTION', False)
+
+ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -15,6 +18,13 @@ INSTALLED_APPS = (
     'ckeditor',
     'web',
 )
+
+if PROD_ENV:
+    INSTALLED_APPS += (
+        'gunicorn',
+    )
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

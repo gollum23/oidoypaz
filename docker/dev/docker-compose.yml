@@ -9,6 +9,7 @@ services:
     container_name: oidoypaz
     environment:
       - TERM=xterm
+      - DEBUG=${DEBUG}
     depends_on:
       - oidoypaz-postgresql
     networks:
